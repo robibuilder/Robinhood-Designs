@@ -308,9 +308,9 @@ a:hover, a:active ,a:link, a:visited {
 
 
     <script>
-        let productID = 0
+        //let productID = 0
         const myUrl = new URL(window.location.href);
-        productID = myUrl.searchParams.get("id");
+        var productID = myUrl.searchParams.get("id");
         //productID = 2
 
         function getAllBatteries(){
