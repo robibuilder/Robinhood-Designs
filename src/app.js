@@ -38,6 +38,7 @@ const batteries = [
         description: "Very important product information."
     },
     { 
+        id: 4,
         brand: "Black & Decker",
         type: "Battery",
         image: "images/bd_battery.png",
@@ -49,7 +50,7 @@ const batteries = [
   ];
 
 router.get('/batteries', (req, res) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:8000');
+    res.header('Access-Control-Allow-Origin', 'https://robibuilder.github.io/Robinhood-Designs/');
     // res.json({
     //     'Hello': 'hi'
     // });
@@ -57,7 +58,7 @@ router.get('/batteries', (req, res) => {
 });
 
 router.get('/batteries/:id', (req, res) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:8000');
+    res.header('Access-Control-Allow-Origin', 'https://robibuilder.github.io/Robinhood-Designs/');
     let id = req.params.id;
     let result = batteries.find((item) => item.id == id);
 
@@ -65,7 +66,7 @@ router.get('/batteries/:id', (req, res) => {
 });
 
 router.get('/test', (req, res) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:8000');
+    res.header('Access-Control-Allow-Origin', 'https://robibuilder.github.io/Robinhood-Designs/');
     res.json({
         'Hello': 'hi'
     });
