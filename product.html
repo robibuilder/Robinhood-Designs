@@ -310,15 +310,15 @@ a:hover, a:active ,a:link, a:visited {
     <script>
         let productID = 0
         const myUrl = new URL(window.location.href);
-        //productID = myUrl.searchParams.get("id");
-        productID = 2
+        productID = myUrl.searchParams.get("id");
+        //productID = 2
 
         function getAllBatteries(){
 
         }
 
         function getBatteryByID(id){
-            var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/";
+            var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/";
             var batteriesID = "batteries/" + id.toString();
             url = url + batteriesID;
 
