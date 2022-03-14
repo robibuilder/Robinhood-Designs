@@ -1,0 +1,27 @@
+
+{
+  "name": "netlify1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src"
+  },
+  "repository": {
+    "type": "git",
+    "build": "git+https://github.com/robibuilder/netlify1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robibuilder/netlify1/issues"
+  },
+  "homepage": "https://github.com/robibuilder/netlify1#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "netlify-lambda": "^2.0.15",
+    "serverless-http": "^2.7.0"
+  }
+}

@@ -1,1 +1,1 @@
-# Robinhood-Designs
+# Store API for Robinhood Designs Online Shop
