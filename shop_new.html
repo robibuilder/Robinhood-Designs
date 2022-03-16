@@ -84,9 +84,9 @@
 
         function getAllBatteries(){
             // prod URL:
-            //var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/batteries";
+            var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/batteries";
             // dev URL
-            var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/batteries";
+            //var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/batteries";
             fetch(url)
             .then(response => {
                 if(response.ok) {
@@ -100,7 +100,7 @@
                     console.log(product.title);
                     //document.getElementById(id_tags[index]).innerHTML = product.title;
                     //index = index + 1;
-                    addCol();
+                    addCol(product.title, product.price, product.description, product.link);
                 })
             })
             .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES
@@ -113,29 +113,29 @@
 
         getAllBatteries();
 
-        function addCol(){
+        function addCol(t, p, d, l){
             // create the column - lg only
             var col = document.createElement("div");
             col.className = "col-lg-3 bg-secondary";
 
             // create the title element - h3
             var title = document.createElement("h3");
-            var node = document.createTextNode("PRODUCT_TITLE");
+            var node = document.createTextNode(t);
             title.appendChild(node);
 
             // create the price element - p-1 // formally addPrice()
             var price = document.createElement("p");
-            node = document.createTextNode("PRODUCT_PRICE");
+            node = document.createTextNode(p);
             price.appendChild(node);
 
             // create the description element - p-1 // formally addDescription()
             var description = document.createElement("p");
-            node = document.createTextNode("PRODUCT_DESCRIPTION");
+            node = document.createTextNode(d);
             description.appendChild(node);
 
             // create the link element - p-1 // formally addLink()
             var link = document.createElement("p");
-            node = document.createTextNode("PRODUCT_LINK");
+            node = document.createTextNode(l);
             link.appendChild(node);
 
             // append elements to the column
@@ -162,7 +162,7 @@
         // addPrice();
         // addDescription();
         // addLink();
-        addCol();
+        //addCol();
 
     </script>
 
