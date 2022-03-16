@@ -58,18 +58,6 @@
 <!-- START OF EDUCATION SECTION -->
 
     <div class="container" style="text-align: center;">
-        <div class="row">
-            <div class="col-lg-6 bg-danger"></div>
-            <div class="col-lg-6">
-                <p id="one">one</p>
-                <p id="two">two</p>
-                <div id="three">three</div>
-                <p id="four">four</p>
-            </div>
-        </div>
-    </div><!-- container -->
-
-    <div class="container" style="text-align: center;">
         <div class="row" id="product">
             <!-- dynamically created product fields -->
         </div>
@@ -78,7 +66,7 @@
     <script>
         const id_tags = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
 
-        document.getElementById(id_tags[2]).innerHTML = "bing bong!";
+        //document.getElementById(id_tags[2]).innerHTML = "bing bong!";
 
         //document.body.onload = addElement;
 
@@ -97,26 +85,35 @@
             .then(data => { 
                 var index = 0;
                 data.map(product => {
-                    console.log(product.title);
+                    console.log(product.image);
                     //document.getElementById(id_tags[index]).innerHTML = product.title;
                     //index = index + 1;
-                    addCol(product.title, product.price, product.description, product.link);
+                    // Prod: 
+                    addCol(product.image, product.title, product.price, "product.html?id=" + product.id);
                 })
             })
             .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES
-                // document.getElementById("title").innerHTML = "PRODUCT_TITLE";
-                // document.getElementById("price").innerHTML = "PRODUCT_PRICE";
-                // document.getElementById("link").innerHTML = "PRODUCT_LINK";
-                // document.getElementById("description").innerHTML = "PRODUCT_DESCRIPTION";
+                addCol("images/hart_battery.png", "PRODUCT_TITLE", "PRODUCT_PRICE", "product.html?id=1");
             })
         }
 
         getAllBatteries();
 
-        function addCol(t, p, d, l){
+        function addImage() {
+            var img = new Image()
+            img.src = "images/hart_battery.png";
+            document.getElementById("product").appendChild(img);
+        }
+
+        function addCol(i, t, p, l){
             // create the column - lg only
             var col = document.createElement("div");
-            col.className = "col-lg-3 bg-secondary";
+            col.className = "col-lg-3";
+
+            var img = new Image();
+            console.log(i);
+            img.src = i;
+            img.alt = "NOTHING TO SEE HERE!";
 
             // create the title element - h3
             var title = document.createElement("h3");
@@ -128,41 +125,21 @@
             node = document.createTextNode(p);
             price.appendChild(node);
 
-            // create the description element - p-1 // formally addDescription()
-            var description = document.createElement("p");
-            node = document.createTextNode(d);
-            description.appendChild(node);
-
             // create the link element - p-1 // formally addLink()
             var link = document.createElement("p");
             node = document.createTextNode(l);
             link.appendChild(node);
 
             // append elements to the column
+            col.appendChild(img);
             col.appendChild(title);
             col.appendChild(price);
-            col.appendChild(description);
             col.appendChild(link);
 
             // get the row element within the main container & append 
             var element = document.getElementById("product");
             element.appendChild(col);
         }
-
-        // function addTitle() {
-        //     var para = document.createElement("h3");
-        //     var node = document.createTextNode("PRODUCT_TITLE");
-        //     para.appendChild(node);
-
-        //     var element = document.getElementById("product");
-        //     element.appendChild(para);
-        // }
-
-        // addTitle();
-        // addPrice();
-        // addDescription();
-        // addLink();
-        //addCol();
 
     </script>
 
