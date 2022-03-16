@@ -129,21 +129,13 @@ a:link, a:visited {
 */
 
 a:hover, a:active ,a:link, a:visited {
-    color: white;
+    color: #007bff;
     text-decoration: none;
 }
 
-#link{
-  background-color: #007bff; 
-  border: none;
-  color: white;
-  padding: 15px 100px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+.product-link {
+    border: 3px solid #007bff;
+    padding: 5px;
 }
 
 /* ----- WINDOW SIZING TESTS ----- */

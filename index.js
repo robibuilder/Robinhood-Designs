@@ -3,7 +3,7 @@ const fs = require('fs')
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'content-type': 'text/html' })
-  fs.createReadStream('shop_new.html').pipe(res)
+  fs.createReadStream('shop.html').pipe(res)
 })
 
 server.listen(process.env.PORT || 8000) 
