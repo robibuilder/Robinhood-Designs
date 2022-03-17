@@ -148,6 +148,24 @@ router.get('/tools/:id', (req, res) => {
     res.status(200).json(result);
 });
 
+// Endpoint to get featured products
+//
+router.get('/featured', (req, res) => {
+    res.header('Access-Control-Allow-Origin', 'https://robibuilder.github.io');
+    let id = req.params.id;
+    let one = batteries.find((item) => item.id == 4);
+    let two = tools.find((item) => item.id = 2);
+    let three = batteries.find((item) => item.id = 3);
+
+    const result = {
+        one,
+        two,
+        three
+    }
+
+    res.status(200).json(result);
+});
+
 // Endpoint for testing only
 //
 router.get('/test', (req, res) => {
