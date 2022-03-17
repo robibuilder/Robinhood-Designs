@@ -106,6 +106,10 @@
             var col = document.createElement("div");
             col.className = "col-lg-4";
 
+            var a = document.createElement("a");
+            //node = document.createTextNode("")
+            a.href = l;
+
             var img = new Image();
             img.src = i;
             img.className = "img-grid"
@@ -117,25 +121,30 @@
             title.appendChild(node);
 
             // create the price element - p-1 // formally addPrice()
-            var price = document.createElement("p");
+            var price = document.createElement("p-1");
             node = document.createTextNode(p);
             price.appendChild(node);
 
-            // create the link element - p-1 // formally addLink()
-            var a = document.createElement("a");
-            node = document.createTextNode("Purchase");
-            a.appendChild(node);
-            a.title = "This is a link";
-            a.href=l;
-            a.className = "product-link";
+            // // create the link element - p-1 // formally addLink()
+            // var a = document.createElement("a");
+            // node = document.createTextNode("Purchase");
+            // a.appendChild(node);
+            // a.title = "This is a link";
+            // a.href=l;
+            // a.className = "product-link";
 
             // append elements to the column
-            col.appendChild(img);
-            col.appendChild(title);
-            col.appendChild(price);
+            //col.appendChild(img);
+            a.appendChild(img);
+            a.appendChild(title);
+            a.appendChild(price);
+
             col.appendChild(a);
 
-            // get the row element within the main container & append 
+            //col.appendChild(title);
+            //col.appendChild(price);
+
+            // get the row element within the main container & append
             var element = document.getElementById("product");
             element.appendChild(col);
         }
