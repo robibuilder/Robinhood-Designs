@@ -66,7 +66,7 @@
         </div>
 
         <!-- TOOL ROW -->
-        <div class="row" id="tool">
+        <div class="row" id="tools">
             <div class="col-lg-1"></div>
             <div class="col-lg-11" style="text-align: left;">
                 <h3>Tool Mounts</h3>
@@ -76,7 +76,7 @@
         </div>
 
         <!-- CHARGER ROW -->
-        <div class="row" id="tool">
+        <div class="row" id="charger">
             <div class="col-lg-1"></div>
             <div class="col-lg-11" style="text-align: left;">
                 <h3>Charger Mounts</h3>
@@ -91,9 +91,9 @@
 
         function getAllBatteries(){
             // prod URL:
-            var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/batteries";
+            //var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/batteries";
             // dev URL
-            //var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/batteries";
+            var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/batteries";
             fetch(url)
             .then(response => {
                 if(response.ok) {
@@ -105,7 +105,31 @@
                 data.map(product => {
                     var link = "product.html?id=" + product.id;
                     console.log(link);
-                    addCol(product.image, product.title, product.price, link);
+                    addCol(product.image, product.title, product.price, link, "product");
+                })
+            })
+            .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES
+                addCol("images/hart_battery.png", "PRODUCT_TITLE", "PRODUCT_PRICE", "product.html?id=1");
+            })
+        }
+
+        function getAllTools(){
+            // prod URL:
+            var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/tools";
+            // dev URL
+            //var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/";
+            fetch(url)
+            .then(response => {
+                if(response.ok) {
+                    return response.json();
+                }
+                throw new Error();
+            })
+            .then(data => { 
+                data.map(product => {
+                    var link = "product.html?id=" + product.id;
+                    console.log(link);
+                    addCol(product.image, product.title, product.price, link, "tools");
                 })
             })
             .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES
@@ -118,7 +142,7 @@
         // t => product.title
         // p => product.price
         // l => product.link 
-        function addCol(i, t, p, l){
+        function addCol(i, t, p, l, c){
             // create the column - lg only
             var col = document.createElement("div");
             col.className = "col-lg-4";
@@ -154,7 +178,7 @@
             //col.appendChild(price);
 
             // get the row element within the main container & append
-            var element = document.getElementById("product");
+            var element = document.getElementById(c);
             element.appendChild(col);
         }
 
