@@ -115,7 +115,7 @@ const batteries = [
 // Endpoint to get all batteries
 //
 router.get('/batteries', (req, res) => {
-    res.header('Access-Control-Allow-Origin', 'https://robibuilder.github.io');
+    res.header('Access-Control-Allow-Origin', 'https://robibuilder.github.io', "http://localhost:8000");
 
     res.status(200).json(batteries);
 });
