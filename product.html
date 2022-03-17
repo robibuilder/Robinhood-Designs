@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head><meta name="viewport" http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head><meta name="viewport" http-equiv="Content-Type" content="text/html; charset=utf-8">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
     <link rel="stylesheet" href="store.css">
-
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  </head>
-  <body>
+</head>
+
+<body>
 
 <!-- ====================================================================================== -->
 
@@ -28,13 +29,19 @@
                     <p>Shop</p>
                 </a>
             </div>
-            <div class="col-lg-8 col-sm-12"><!-- insert "border"-->
+            <div class="col-lg-1">
+                <a href="index.html">
+                    <p>About</p>
+                </a>
+            </div>
+            <div class="col-lg-7 col-sm-12"><!-- insert "border"-->
                 <h5>Robinhood Designs</h5>
             </div>
             <div class="col-lg-2">
             </div>
         </div>
     </div>
+
 <!-- ======================================================================================= -->
 
 <!-- START OF MID SECTION -->
@@ -53,26 +60,13 @@
                 <p id="log"></p>
             </div>
         </div>
-
     </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12" style="height: 30vh;">
-            </div>
-        </div>
-    </div>
-
 
     <script>
         //let productID = 0
         const myUrl = new URL(window.location.href);
         var productID = myUrl.searchParams.get("id");
         //productID = 2
-
-        function getAllBatteries(){
-
-        }
 
         function getBatteryByID(id){
             var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/";
@@ -102,28 +96,13 @@
                 document.getElementById("price").innerHTML = "PRODUCT_PRICE";
                 document.getElementById("link").innerHTML = "PRODUCT_LINK";
                 document.getElementById("description").innerHTML = "PRODUCT_DESCRIPTION";
+                document.getElementById("image").innerHTML = "IMAGE_PATH.HTML";
             })
         }
 
         getBatteryByID(productID);
 
     </script>
-
-
-<!-- ======================================================================================= -->
-
-<!-- START OF EDUCATION SECTION -->
-
-    <div class="container">
-        <row class="row">
-        </div> <!-- row -->
-
-
-        <div class="row">
-            <div class="col-lg-12" style="height: 10vh;">
-            </div>
-        </div>
-    </div>
 
 
 <!-- ====================================================================================== -->
@@ -139,22 +118,21 @@
 
 <!-- BEGIN WITH FOOTER -->
 
-  <footer class="footer">
-        <div class="container">
-            <div class="row" style="text-align: right;">
-                <div class="col-lg-4"></div>
-                <div class="col-lg-4">
-                        <a href="https://www.facebook.com/jacob.robinett.58" style=""><i class="fa fa-facebook-square i"></i></a>
-                        <a href="https://www.instagram.com/jacob_robinett/"><i class="fa fa-instagram i" href="instagram.com"></i></a>
-                        <a href="https://github.com/robibuilder"><i class="fa fa-github i"></i></a>
-                </div>
-                <div class="col-lg-4">
-                    <span class="text-muted i"> Copyright © Robinhood Designs LLC.</span>
-                </div>
-                <div class="col-lg-1">
-                </div>
+<footer class="footer">
+    <div class="container">
+        <div class="row" style="text-align: right;">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                    <a href="https://www.facebook.com/jacob.robinett.58" style=""><i class="fa fa-facebook-square i"></i></a>
+                    <a href="https://www.instagram.com/jacob_robinett/"><i class="fa fa-instagram i" href="instagram.com"></i></a>
+                    <a href="https://github.com/robibuilder"><i class="fa fa-github i"></i></a>
             </div>
+            <div class="col-lg-4">
+                <span class="text-muted i"> Copyright © Robinhood Designs LLC.</span>
+            </div>
+            <div class="col-lg-1"></div>
         </div>
+     </div>
 </footer>
 
 

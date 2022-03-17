@@ -28,11 +28,16 @@
     </div> -->
 
 
-    <div class="container-fluid" style="height: 10vh;" style="background-color: blue;">
+    <div class="container" style="height: 10vh;" style="background-color: blue;">
         <div class="row" style="margin-top: 5vh; text-align: center;">
-            <div class="col-lg-2">
+            <div class="col-lg-1">
                 <a href="index.html">
                     <p>Home</p>
+                </a>
+            </div>
+            <div class="col-lg-1">
+                <a href="index.html">
+                    <p>About</p>
                 </a>
             </div>
             <div class="col-lg-8 col-sm-12"><!-- insert "border"-->
@@ -44,27 +49,39 @@
     </div>
 
     </div>
-<!-- ======================================================================================= -->
 
-<!-- START OF EDUCATION SECTION -->
-
-<!--     <div class="container">
-        <div class="row">
-            <p id="demo">xx</p>
-        </div>
-    </div> -->
 <!-- ======================================================================================= -->
 
 <!-- START OF EDUCATION SECTION -->
 
     <div class="container" style="text-align: center;">
+        <!-- BATTERY ROW -->
         <div class="row" id="product">
             <div class="col-lg-1"></div>
             <div class="col-lg-11" style="text-align: left;">
                 <h3>Battery Mounts</h3>
                 <hr>
             </div>
+            <!-- dynamically created product fields -->
+        </div>
 
+        <!-- TOOL ROW -->
+        <div class="row" id="tool">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-11" style="text-align: left;">
+                <h3>Tool Mounts</h3>
+                <hr>
+            </div>
+            <!-- dynamically created product fields -->
+        </div>
+
+        <!-- CHARGER ROW -->
+        <div class="row" id="tool">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-11" style="text-align: left;">
+                <h3>Charger Mounts</h3>
+                <hr>
+            </div>
             <!-- dynamically created product fields -->
         </div>
     </div><!-- container -->
@@ -74,9 +91,9 @@
 
         function getAllBatteries(){
             // prod URL:
-            var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/batteries";
+            //var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/batteries";
             // dev URL
-            //var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/batteries";
+            var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/batteries";
             fetch(url)
             .then(response => {
                 if(response.ok) {
@@ -125,19 +142,11 @@
             node = document.createTextNode(p);
             price.appendChild(node);
 
-            // // create the link element - p-1 // formally addLink()
-            // var a = document.createElement("a");
-            // node = document.createTextNode("Purchase");
-            // a.appendChild(node);
-            // a.title = "This is a link";
-            // a.href=l;
-            // a.className = "product-link";
-
             // append elements to the column
             //col.appendChild(img);
             a.appendChild(img);
             a.appendChild(title);
-            a.appendChild(price);
+            //a.appendChild(price);
 
             col.appendChild(a);
 

@@ -42,7 +42,7 @@ body {
     }
 
     h4{ /* depricated in feature project section */
-        font-size: 18px;
+        font-size: 25px;
         color: white;
     }
 
@@ -53,6 +53,7 @@ body {
 
     p-2 {
         font-size: 25px;
+        color: white;
     }
 }
 
@@ -127,6 +128,15 @@ a:link, a:visited {
   display: inline-block;
 }
 */
+
+#link{
+    background-color: #007bff;
+    color: white;
+    padding: 15px 75px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
 
 a:hover, a:active ,a:link, a:visited {
     color: #007bff;
