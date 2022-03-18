@@ -65,7 +65,7 @@ const batteries = [
         brand: "Hart",
         type: "Tool",
         image: "images/hart_tool.png",
-        title: "Hart 20V Battery Holder",
+        title: "Hart Tool Mount",
         price: "$4.99",
         link: "https://www.ebay.com/itm/384011739714",
         description: "Very important product information."
@@ -75,7 +75,7 @@ const batteries = [
         brand: "Craftsman",
         type: "Tool",
         image: "images/craftsman_tool.png",
-        title: "Craftsman 20V Battery Holder",
+        title: "Craftsman Tool Mount",
         price: "$4.99",
         link: "https://www.ebay.com/itm/384011766136",
         description: "Very important product information."
@@ -85,7 +85,7 @@ const batteries = [
         brand: "DeWalt",
         type: "Tool",
         image: "images/dewalt_tool.png",
-        title: "DeWalt 20V Battery Holder",
+        title: "DeWalt Tool Mount",
         price: "$4.99",
         link: "https://www.ebay.com/itm/384011766136",
         description: "Very important product information."
@@ -95,7 +95,7 @@ const batteries = [
         brand: "Black & Decker",
         type: "Tool",
         image: "images/bd_tool.png",
-        title: "Black & Decker 20V Battery Holder",
+        title: "Black & Decker tool Mount",
         price: "$4.99",
         link: "https://www.ebay.com/itm/384421528132",
         description: "Very important product information."
