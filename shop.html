@@ -69,7 +69,7 @@
         <div class="row" id="tools">
             <div class="col-lg-1"></div>
             <div class="col-lg-11" style="text-align: left;">
-                <h3>Tool Mounts</h3>
+                <h3 style="padding-top: 1vh;">Tool Mounts</h3>
                 <hr>
             </div>
             <!-- dynamically created product fields -->
@@ -93,9 +93,9 @@
 
         function getAllProducts(type){
             // prod URL:
-            //var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/batteries";
+            var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/batteries";
             // dev URL
-            var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/" + type;
+            //var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/" + type;
             fetch(url)
             .then(response => {
                 if(response.ok) {
@@ -105,13 +105,13 @@
             })
             .then(data => { 
                 data.map(product => {
-                    var link = "product.html?id=" + product.id;
+                    var link = "product.html?type=" + product.type + "&id=" + product.id;
                     console.log(link);
                     addCol(product.image, product.title, product.price, link, type);
                 })
             })
             .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES
-                addCol("images/hart_battery.png", "PRODUCT_TITLE", "PRODUCT_PRICE", "product.html?id=1", type);
+                addCol("images/hart_battery.png", "PRODUCT_TITLE", "PRODUCT_PRICE", "product.html?type=batteries&id=1", type);
             })
         }
 
