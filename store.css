@@ -169,12 +169,6 @@ a:hover, a:active ,a:link, a:visited {
 .c_height{
     height: 50vh;
 }
-	
-
-.i{
-    padding-right: 5px;
-    color: #;
-}
 
 .padding-top35{
     padding-top: 34vh;
@@ -201,14 +195,6 @@ a:hover, a:active ,a:link, a:visited {
     border-width: 5px !important;
 }
 
-.footer {
-  /* position: absolute; */ /* THIS LINE MESSES WITH THE FOOTER */
-  bottom: 0;
-  /* Set the fixed height/width of the footer here */
-  width: 100%;
-  background-color: black;
-}
-
 /* ----- FONTS ----- */
 
 .App{
@@ -223,7 +209,7 @@ a:hover, a:active ,a:link, a:visited {
 
 .footer{
     padding: 20px;
-    background-color: white;
+    background-color: #007bff;
     color: white
 }
 
