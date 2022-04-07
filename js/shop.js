@@ -16,13 +16,14 @@
             })
             .then(data => { 
                 data.map(product => {
-                    var link = "product.html?type=" + product.type + "&id=" + product.id;
+                    var link = "product.html?type=" + "lol" + "&id=" + product.id;
                     console.log(link);
                     addCol(product.image, product.title, product.price, link, type);
                 })
             })
             .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES
-                addCol("images/hart_battery.png", "PRODUCT_TITLE", "PRODUCT_PRICE", "product.html?type=batteries&id=1", type);
+                var link = "product.html?type=" + type + "?id=0";
+                addCol("images/hart_battery.png", "PRODUCT_TITLE ", "PRODUCT_PRICE", link, type);
             })
         }
 
@@ -52,7 +53,7 @@
 
             // create the price element - p-1 // formally addPrice()
             var price = document.createElement("p-1");
-            node = document.createTextNode(p);
+            node = document.createTextNode(l);
             price.appendChild(node);
 
             // append elements to the column
@@ -64,7 +65,7 @@
             col.appendChild(a);
 
             //col.appendChild(title);
-            //col.appendChild(price);
+            col.appendChild(price);
 
             // get the row element within the main container & append
             var element = document.getElementById(c);
