@@ -51,21 +51,11 @@
             var node = document.createTextNode(t);
             title.appendChild(node);
 
-            // create the price element - p-1 // formally addPrice()
-            // var price = document.createElement("p-1");
-            // node = document.createTextNode(l);
-            // price.appendChild(node);
-
             // append elements to the column
-            //col.appendChild(img);
             a.appendChild(img);
             a.appendChild(title);
-            //a.appendChild(price);
 
             col.appendChild(a);
-
-            //col.appendChild(title);
-            //col.appendChild(price);
 
             // get the row element within the main container & append
             var element = document.getElementById(c);
