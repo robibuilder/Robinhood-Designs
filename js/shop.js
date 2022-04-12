@@ -4,7 +4,7 @@
 
         function getAllProducts(type){
             // prod URL:
-            var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/batteries";
+            var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/" + type;
             // dev URL
             //var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/" + type;
             fetch(url)
@@ -16,7 +16,7 @@
             })
             .then(data => { 
                 data.map(product => {
-                    var link = "product.html?type=" + "lol" + "&id=" + product.id;
+                    var link = "product.html?type=" + type + "&id=" + product.id;
                     console.log(link);
                     addCol(product.image, product.title, product.price, link, type);
                 })
