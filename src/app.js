@@ -194,20 +194,20 @@ router.get('/tools/:id', (req, res) => {
     res.status(200).json(result);
 });
 
-// Endpoint to get featured products
+// Endpoint to get featured
 //
 router.get('/featured', (req, res) => {
-    res.header('Access-Control-Allow-Origin', 'https://robibuilder.github.io');
-    let id = req.params.id;
-    let one = batteries.find((item) => item.id == 4);
-    let two = tools.find((item) => item.id = 2);
-    let three = batteries.find((item) => item.id = 3);
+    res.header('Access-Control-Allow-Origin', 'http://localhost:8000');
 
-    const result = {
-        one,
-        two,
-        three
-    }
+    res.status(200).json(featured);
+});
+
+// Endpoint to get an individual featured by ID
+//
+router.get('/featured/:id', (req, res) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:8000');
+    let id = req.params.id;
+    let result = featured.find((item) => item.id == id);
 
     res.status(200).json(result);
 });
