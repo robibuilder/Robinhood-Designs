@@ -20,7 +20,7 @@
                 data.map(product => {
                     var link = "product.html?type=" + type + "&id=" + product.id;
                     console.log(link);
-                    if (count < 3)
+                    if (product.active === "true")
                     {
                         addCol(product.image, product.title, product.price, link, type);
                     }
