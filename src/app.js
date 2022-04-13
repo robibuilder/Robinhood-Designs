@@ -10,7 +10,7 @@ const batteries = [
     {
         id: 1,
         brand: "Hart",
-        type: "Battery",
+        type: "batteries",
         image: "images/hart_battery.png",
         title: "Hart 20V Battery Holder",
         price: "$4.99",
@@ -21,7 +21,7 @@ const batteries = [
     { 
         id: 2,
         brand: "Craftsman",
-        type: "Battery",
+        type: "batteries",
         image: "images/craftsman_battery.png",
         title: "Craftsman 20V Battery Holder",
         price: "$4.99",
@@ -32,7 +32,7 @@ const batteries = [
     {
         id: 3,
         brand: "DeWalt",
-        type: "Battery",
+        type: "batteries",
         image: "images/dewalt_battery.png",
         title: "DeWalt 20V Battery Holder",
         price: "$4.99",
@@ -43,7 +43,7 @@ const batteries = [
     { 
         id: 4,
         brand: "Black & Decker",
-        type: "Battery",
+        type: "batteries",
         image: "images/bd_battery.png",
         title: "Black & Decker 20V Battery Holder",
         price: "$4.99",
@@ -54,7 +54,7 @@ const batteries = [
     { 
         id: 5,
         brand: "Bauer",
-        type: "Battery",
+        type: "batteries",
         image: "images/bauer_battery.png",
         title: "Bauer 20V Battery Holder",
         price: "$4.99",
@@ -68,7 +68,7 @@ const batteries = [
     {
         id: 1,
         brand: "Hart",
-        type: "Tool",
+        type: "tools",
         image: "images/hart_tool.png",
         title: "Hart Tool Mount",
         price: "$4.99",
@@ -79,7 +79,7 @@ const batteries = [
     { 
         id: 2,
         brand: "Craftsman",
-        type: "Tool",
+        type: "tools",
         image: "images/craftsman_tool.png",
         title: "Craftsman Tool Mount",
         price: "$4.99",
@@ -90,7 +90,7 @@ const batteries = [
     {
         id: 3,
         brand: "DeWalt",
-        type: "Tool",
+        type: "tools",
         image: "images/dewalt_tool.png",
         title: "DeWalt Tool Mount",
         price: "$4.99",
@@ -101,7 +101,7 @@ const batteries = [
     { 
         id: 4,
         brand: "Black & Decker",
-        type: "Tool",
+        type: "tools",
         image: "images/bd_tool.png",
         title: "Black & Decker tool Mount",
         price: "$4.99",
