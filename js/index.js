@@ -46,7 +46,7 @@
 
             var img = new Image();
             img.src = i;
-            img.className = "img-grid"
+            img.className = "img-grid";
             img.alt = "NOTHING TO SEE HERE!";
 
             // create the title element - h3
