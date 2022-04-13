@@ -7,6 +7,8 @@
             var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/" + type;
             // dev URL
             //var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/" + type;
+
+            var count = 0;
             fetch(url)
             .then(response => {
                 if(response.ok) {
@@ -18,10 +20,11 @@
                 data.map(product => {
                     var link = "product.html?type=" + type + "&id=" + product.id;
                     console.log(link);
-                    if (product.title === "true")
+                    if (count < 3)
                     {
                         addCol(product.image, product.title, product.price, link, type);
                     }
+                    count = count + 1;
                 })
             })
             .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head><meta name="viewport" http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="store.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+
+<!-- ====================================================================================== -->
+
+    <div class="container" style="height: 10vh;" style="background-color: blue;">
+        <div class="row" style="margin-top: 5vh; text-align: center;">
+            <div class="col-lg-1">
+                <a href="index.html">
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="col-lg-1">
+                <a href="shop.html">
+                    <p><u>Shop</u></p>
+                </a>
+            </div>
+            <div class="col-lg-1">
+                <a href="about.html">
+                    <p>About</p>
+                </a>
+            </div>
+            <div class="col-lg-7 col-sm-12"><!-- insert "border"-->
+                <h5>Robinhood Designs</h5>
+            </div>
+            <div class="col-lg-2">
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+<!-- ======================================================================================= -->
+
+<!-- START OF EDUCATION SECTION -->
+
+    <div class="container" style="text-align: center;">
+        <!-- BATTERY ROW -->
+        <div class="row" id="batteries">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-11" style="text-align: left;">
+                <h3>Battery Mounts</h3>
+                <hr>
+            </div>
+            <!-- dynamically created product fields -->
+        </div>
+
+        <!-- TOOL ROW -->
+        <div class="row" id="tools">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-11" style="text-align: left;">
+                <h3 style="padding-top: 10vh;">Tool Mounts</h3>
+                <hr>
+            </div>
+            <!-- dynamically created product fields -->
+        </div>
+
+        <!-- CHARGER ROW -->
+        <div class="row" id="charger">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-11" style="text-align: left;">
+                <h3 style="padding-top: 10vh;">Charger Mounts</h3>
+                <hr>
+            </div>
+            <!-- dynamically created product fields -->
+        </div>
+    </div><!-- container -->
+
+    <script>
+        //document.body.onload = getAllBatteries;
+        getAllProducts("batteries");
+        getAllProducts("tools");
+
+        function getAllProducts(type){
+            // prod URL:
+            //var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/" + type;
+            // dev URL
+            var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/" + type;
+
+            var count = 0;
+            fetch(url)
+            .then(response => {
+                if(response.ok) {
+                    return response.json();
+                }
+                throw new Error();
+            })
+            .then(data => { 
+                data.map(product => {
+                    var link = "product.html?type=" + type + "&id=" + product.id;
+                    console.log(link);
+                    if (product.title === "true")
+                    {
+                        addCol(product.image, product.title, product.price, link, type);
+                    }
+                    count = count + 1;
+                })
+            })
+            .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES
+                var link = "product.html?type=" + type + "?id=0";
+                addCol("images/hart_battery.png", "PRODUCT_TITLE ", "PRODUCT_PRICE", link, type);
+            })
+        }
+
+        // addCol => create html elements that make up a product listing on the "Shop" page
+        // i => product.image
+        // t => product.title
+        // p => product.price
+        // l => product.link 
+        function addCol(i, t, p, l, c){
+            // create the column - lg only
+            var col = document.createElement("div");
+            col.className = "col-lg-4";
+
+            var a = document.createElement("a");
+            //node = document.createTextNode("")
+            a.href = l;
+
+            var img = new Image();
+            img.src = i;
+            img.className = "img-grid"
+            img.alt = "NOTHING TO SEE HERE!";
+
+            // create the title element - h3
+            var title = document.createElement("p-1");
+            var node = document.createTextNode(t);
+            title.appendChild(node);
+
+            // append elements to the column
+            a.appendChild(img);
+            a.appendChild(title);
+
+            col.appendChild(a);
+
+            // get the row element within the main container & append
+            var element = document.getElementById(c);
+            element.appendChild(col);
+        }
+
+    </script>
+
+
+<!-- ====================================================================================== -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/dynamic_css.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+<!-- BEGIN WITH FOOTER -->
+
+  <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8"></div>
+                <div class="col-lg-1">
+                        <a href="https://www.facebook.com/jacob.robinett.58"><i class="fa fa-facebook-square i"></i></a>
+                        <a href="https://www.instagram.com/jacob_robinett/"><i class="fa fa-instagram i" href="instagram.com"></i></a>
+                        <a href="https://github.com/robibuilder"><i class="fa fa-github i"></i></a>
+                </div>
+                <div class="col-lg-3">
+                    <span class="text-muted i"> Copyright © Jacob Robinett</span>
+                </div>
+                <div class="col-lg-1">
+                </div>
+            </div>
+        </div>
+</footer>
+
+
+</html>
