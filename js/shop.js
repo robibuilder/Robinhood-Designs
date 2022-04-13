@@ -18,7 +18,10 @@
                 data.map(product => {
                     var link = "product.html?type=" + type + "&id=" + product.id;
                     console.log(link);
-                    addCol(product.image, product.title, product.price, link, type);
+                    if (product.title == "true")
+                    {
+                        addCol(product.image, product.title, product.price, link, type);
+                    }
                 })
             })
             .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES

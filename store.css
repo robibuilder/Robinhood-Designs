@@ -138,10 +138,10 @@ a:link, a:visited {
     display: inline-block;
 }
 
-/* a:hover, a:active ,a:link, a:visited {
-    color: #007bff;
+a:hover, a:active ,a:link, a:visited {
+    /* color: #007bff; */
     text-decoration: none;
-} */
+}
 
 .product-link {
     border: 3px solid #007bff;
