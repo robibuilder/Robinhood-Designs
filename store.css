@@ -130,6 +130,19 @@ a:link, a:visited {
 */
 
 #link{
+    background-color: white;
+    border: solid;
+    border-width: 5px;
+    border-radius: 25px;
+    border-color: #007bff;
+    color: black;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#homepage_link{
     background-color: #007bff;
     color: black;
     padding: 15px 75px;
@@ -144,20 +157,8 @@ a:hover, a:active ,a:link, a:visited {
 }
 
 .product-link {
-    border: 3px solid #007bff;
+    /* border: 3px solid #007bff; */
     padding: 5px;
-}
-
-/* ----- WINDOW SIZING TESTS ----- */
-
-.small_window{
-    background-color: green;
-
-}
-
-.medium_window{
-    height: 50vh;
-    background-color: black;
 }
 
 /* ----- FORMATTING ----- */
@@ -199,10 +200,6 @@ a:hover, a:active ,a:link, a:visited {
 
 .App{
     font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-}
-
-.text1 {
-    color: white;
 }
 
 /* ----- FOOTER ----- */

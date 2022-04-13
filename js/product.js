@@ -36,9 +36,12 @@
                 document.getElementById("image").innerHTML = imagePath;
             })
             .catch((error) => {
+                var text = "Purchase";
+                var purchaseLink = text.link("http://jacobrobinett.com");
+
                 document.getElementById("title").innerHTML = "PRODUCT_TITLE";
                 document.getElementById("price").innerHTML = "PRODUCT_PRICE";
-                document.getElementById("link").innerHTML = "PRODUCT_LINK";
+                document.getElementById("link").innerHTML = purchaseLink;
                 document.getElementById("description").innerHTML = "PRODUCT_DESCRIPTION";
                 document.getElementById("image").innerHTML = "IMAGE_PATH.HTML";
             })
