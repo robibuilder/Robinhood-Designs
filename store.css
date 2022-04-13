@@ -205,9 +205,13 @@ a:hover, a:active ,a:link, a:visited {
 /* ----- FOOTER ----- */
 
 .footer{
-    padding: 20px;
-    /* background-color: #007bff; */
+    background-color: #007bff;
     color: black;
+}
+
+.footer-padding{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* ----- OTHER ----- */
