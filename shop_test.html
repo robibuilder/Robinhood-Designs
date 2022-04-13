@@ -17,27 +17,16 @@
 
 <!-- ====================================================================================== -->
 
-<!--     <div class="jumbotron" style="">
-        <div class="row top_margin" style="">
-            <div class="col-lg-1 col-sm-0"></div>
-            <div class="col-lg-9 col-sm-12 rounded">
-
-                <h1>Robinhood Designs</h1>
-            </div>
-        </div>
-    </div> -->
-
-
-    <div class="container" style="height: 100vh;" style="background-color: blue;">
+    <div class="container" style="height: 10vh;" style="background-color: blue;">
         <div class="row" style="margin-top: 5vh; text-align: center;">
             <div class="col-lg-1">
                 <a href="index.html">
-                    <p><u>Home</u></p>
+                    <p>Home</p>
                 </a>
             </div>
             <div class="col-lg-1">
                 <a href="shop.html">
-                    <p>Shop</p>
+                    <p><u>Shop</u></p>
                 </a>
             </div>
             <div class="col-lg-1">
@@ -46,40 +35,55 @@
                 </a>
             </div>
             <div class="col-lg-7 col-sm-12"><!-- insert "border"-->
-                <!-- <h5>Robinhood Designs</h5> -->
+                <h5>Robinhood Designs</h5>
             </div>
             <div class="col-lg-2">
             </div>
-
-            <div class="col-lg-12" style="padding-top: 20vh;">
-                <h1>Robinhood Designs.</h1>
-            </div>
-
-            <div class="col-lg-12" style="padding-top: 10vh;">
-                <a href="shop.html" id="link">
-                    <h4>Shop</h4>
-                </a>
-            </div>
         </div>
     </div>
+
+    </div>
+
 <!-- ======================================================================================= -->
 
 <!-- START OF EDUCATION SECTION -->
 
-    <div class="container-fluid" style="text-align: center;">
-        <div class="row" style="height: 20vh;" id="featured">
+    <div class="container" style="text-align: center;">
+        <!-- BATTERY ROW -->
+        <div class="row" id="batteries">
             <div class="col-lg-1"></div>
-            <div class="col-lg-10 middle">
-                <h5>Featured Products</h5>
-                <p-1>Custom designed for your tools & batteries</p-1>
+            <div class="col-lg-11" style="text-align: left;">
+                <h3>Battery Mounts</h3>
+                <hr>
             </div>
-            <div class="col-lg-1"></div>
+            <!-- dynamically created product fields -->
         </div>
-    </div>
+
+        <!-- TOOL ROW -->
+        <div class="row" id="tools">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-11" style="text-align: left;">
+                <h3 style="padding-top: 10vh;">Tool Mounts</h3>
+                <hr>
+            </div>
+            <!-- dynamically created product fields -->
+        </div>
+
+        <!-- CHARGER ROW -->
+        <div class="row" id="charger">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-11" style="text-align: left;">
+                <h3 style="padding-top: 10vh;">Charger Mounts</h3>
+                <hr>
+            </div>
+            <!-- dynamically created product fields -->
+        </div>
+    </div><!-- container -->
 
     <script>
         //document.body.onload = getAllBatteries;
-        getAllProducts("featured");
+        getAllProducts("batteries");
+        getAllProducts("tools");
 
         function getAllProducts(type){
             // prod URL:
@@ -87,6 +91,7 @@
             // dev URL
             var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/" + type;
 
+            var count = 0;
             fetch(url)
             .then(response => {
                 if(response.ok) {
@@ -96,17 +101,18 @@
             })
             .then(data => { 
                 data.map(product => {
-                    var link = "product.html?type=" + product.type + "&id=" + product.id;
+                    var link = "product.html?type=" + type + "&id=" + product.id;
                     console.log(link);
                     if (product.active === "true")
                     {
                         addCol(product.image, product.title, product.price, link, type);
                     }
+                    count = count + 1;
                 })
             })
             .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES
                 var link = "product.html?type=" + type + "?id=0";
-                addCol("images/hart_battery.png", "PRODUCT_TITLE ", "PRODUCT_PRICE", link, "featurd");
+                addCol("images/hart_battery.png", "PRODUCT_TITLE ", "PRODUCT_PRICE", link, type);
             })
         }
 
@@ -147,6 +153,7 @@
 
     </script>
 
+
 <!-- ====================================================================================== -->
 
 
@@ -163,12 +170,16 @@
   <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <p-2>Robinhood Designs LLC</p-2>
-                    <div>
-                        <p-2>2323 East 98th Pl.<br>Tulsa, Ok 74136<br>(918) 857-5436<br></p-2>
-                    </div>
-                    <span class="text-muted i"><p-2>Copyright © Jacob Robinett</p-2></span>
+                <div class="col-lg-8"></div>
+                <div class="col-lg-1">
+                        <a href="https://www.facebook.com/jacob.robinett.58"><i class="fa fa-facebook-square i"></i></a>
+                        <a href="https://www.instagram.com/jacob_robinett/"><i class="fa fa-instagram i" href="instagram.com"></i></a>
+                        <a href="https://github.com/robibuilder"><i class="fa fa-github i"></i></a>
+                </div>
+                <div class="col-lg-3">
+                    <span class="text-muted i"> Copyright © Jacob Robinett</span>
+                </div>
+                <div class="col-lg-1">
                 </div>
             </div>
         </div>
