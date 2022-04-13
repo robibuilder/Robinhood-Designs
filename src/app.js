@@ -197,7 +197,7 @@ router.get('/tools/:id', (req, res) => {
 // Endpoint to get featured
 //
 router.get('/featured', (req, res) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:8000');
+    res.header('Access-Control-Allow-Origin', 'https://robibuilder.github.io');
 
     res.status(200).json(featured);
 });
@@ -205,7 +205,7 @@ router.get('/featured', (req, res) => {
 // Endpoint to get an individual featured by ID
 //
 router.get('/featured/:id', (req, res) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:8000');
+    res.header('Access-Control-Allow-Origin', 'https://robibuilder.github.io');
     let id = req.params.id;
     let result = featured.find((item) => item.id == id);
 
