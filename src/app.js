@@ -15,7 +15,8 @@ const batteries = [
         title: "Hart 20V Battery Holder",
         price: "$4.99",
         link: "https://www.ebay.com/itm/383881200540",
-        description: "Very important product information."
+        description: "Very important product information.",
+        active: "true"
     },
     { 
         id: 2,
@@ -25,7 +26,8 @@ const batteries = [
         title: "Craftsman 20V Battery Holder",
         price: "$4.99",
         link: "https://www.ebay.com/itm/384421539579",
-        description: "Very important product information."
+        description: "Very important product information.",
+        active: "true"
     },
     {
         id: 3,
@@ -35,7 +37,8 @@ const batteries = [
         title: "DeWalt 20V Battery Holder",
         price: "$4.99",
         link: "https://www.ebay.com/itm/383881200540",
-        description: "Very important product information."
+        description: "Very important product information.",
+        active: "true"
     },
     { 
         id: 4,
@@ -45,7 +48,8 @@ const batteries = [
         title: "Black & Decker 20V Battery Holder",
         price: "$4.99",
         link: "https://www.ebay.com/itm/383899226414",
-        description: "Very important product information."
+        description: "Very important product information.",
+        active: "true"
     },
     { 
         id: 5,
@@ -55,7 +59,8 @@ const batteries = [
         title: "Bauer 20V Battery Holder",
         price: "$4.99",
         link: "https://www.ebay.com/itm/384040356820",
-        description: "Very important product information."
+        description: "Very important product information.",
+        active: "true"
     },
   ];
 
@@ -68,7 +73,8 @@ const batteries = [
         title: "Hart Tool Mount",
         price: "$4.99",
         link: "https://www.ebay.com/itm/384011739714",
-        description: "Very important product information."
+        description: "Very important product information.",
+        active: "true"
     },
     { 
         id: 2,
@@ -78,7 +84,8 @@ const batteries = [
         title: "Craftsman Tool Mount",
         price: "$4.99",
         link: "https://www.ebay.com/itm/384011766136",
-        description: "Very important product information."
+        description: "Very important product information.",
+        active: "true"
     },
     {
         id: 3,
@@ -88,7 +95,8 @@ const batteries = [
         title: "DeWalt Tool Mount",
         price: "$4.99",
         link: "https://www.ebay.com/itm/384011766136",
-        description: "Very important product information."
+        description: "Very important product information.",
+        active: "true"
     },
     { 
         id: 4,
@@ -98,19 +106,57 @@ const batteries = [
         title: "Black & Decker tool Mount",
         price: "$4.99",
         link: "https://www.ebay.com/itm/384421528132",
-        description: "Very important product information."
+        description: "Very important product information.",
+        active: "true"
     },
-    // { 
-    //     id: 5,
-    //     brand: "Bauer",
-    //     type: "Tool",
-    //     image: "images/bauer_tool.png",
-    //     title: "Bauer 20V Battery Holder",
-    //     price: "$4.99",
-    //     link: "https://www.ebay.com/itm/384040356820",
-    //     description: "Very important product information."
-    // },
+    { 
+        id: 5,
+        brand: "Bauer",
+        type: "Tool",
+        image: "images/bauer_tool.png",
+        title: "Bauer 20V Battery Holder",
+        price: "$4.99",
+        link: "https://www.ebay.com/itm/384040356820",
+        description: "Very important product information.",
+        active: "false"
+    },
   ];
+
+  const featured = [
+    {
+        id: 1,
+        brand: "Hart",
+        type: "tools",
+        image: "images/hart_tool.png",
+        title: "Hart Tool Mount",
+        price: "$4.99",
+        link: "https://www.ebay.com/itm/384011739714",
+        description: "Very important product information.",
+        active: "true"
+    },
+    {
+        id: 3,
+        brand: "DeWalt",
+        type: "batteries",
+        image: "images/dewalt_battery.png",
+        title: "DeWalt 20V Battery Holder",
+        price: "$4.99",
+        link: "https://www.ebay.com/itm/383881200540",
+        description: "Very important product information.",
+        active: "true"
+    },
+    { 
+        id: 4,
+        brand: "Black & Decker",
+        type: "tools",
+        image: "images/bd_tool.png",
+        title: "Black & Decker tool Mount",
+        price: "$4.99",
+        link: "https://www.ebay.com/itm/384421528132",
+        description: "Very important product information.",
+        active: "true"
+    },
+ ];
 
 // Endpoint to get all batteries
 //
