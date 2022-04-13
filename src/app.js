@@ -127,7 +127,7 @@ const batteries = [
         id: 1,
         brand: "Hart",
         type: "tools",
-        image: "images/hart_tool.png",
+        image: "images/hart_battery.png",
         title: "Hart Tool Mount",
         price: "$4.99",
         link: "https://www.ebay.com/itm/384011739714",
@@ -135,7 +135,7 @@ const batteries = [
         active: "true"
     },
     {
-        id: 3,
+        id: 2,
         brand: "DeWalt",
         type: "batteries",
         image: "images/dewalt_battery.png",
@@ -146,10 +146,10 @@ const batteries = [
         active: "true"
     },
     { 
-        id: 4,
+        id: 3,
         brand: "Black & Decker",
         type: "tools",
-        image: "images/bd_tool.png",
+        image: "images/hart_battery.png",
         title: "Black & Decker tool Mount",
         price: "$4.99",
         link: "https://www.ebay.com/itm/384421528132",
