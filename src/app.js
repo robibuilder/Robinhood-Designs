@@ -25,7 +25,7 @@ const batteries = [
         image: "images/craftsman_battery.png",
         title: "Craftsman 20V Battery Holder",
         price: "$4.99",
-        link: "https://www.ebay.com/itm/384421539579",
+        link: "https://www.ebay.com/itm/384771366351",
         description: "Very important product information.",
         active: "true"
     },
@@ -36,7 +36,7 @@ const batteries = [
         image: "images/dewalt_battery.png",
         title: "DeWalt 20V Battery Holder",
         price: "$4.99",
-        link: "https://www.ebay.com/itm/383881200540",
+        link: "https://www.ebay.com/itm/384027568322",
         description: "Very important product information.",
         active: "true"
     },
@@ -103,7 +103,7 @@ const batteries = [
         brand: "Black & Decker",
         type: "tools",
         image: "images/bd_tool.png",
-        title: "Black & Decker tool Mount",
+        title: "Black & Decker Tool Mount",
         price: "$4.99",
         link: "https://www.ebay.com/itm/384421528132",
         description: "Very important product information.",
@@ -135,7 +135,7 @@ const batteries = [
         active: "true"
     },
     {
-        id: 2,
+        id: 3,
         brand: "DeWalt",
         type: "batteries",
         image: "images/dewalt_battery.png",
@@ -146,11 +146,11 @@ const batteries = [
         active: "true"
     },
     { 
-        id: 3,
+        id: 4,
         brand: "Black & Decker",
         type: "tools",
         image: "images/bd_tool.png",
-        title: "Black & Decker tool Mount",
+        title: "Black & Decker Tool Mount",
         price: "$4.99",
         link: "https://www.ebay.com/itm/384421528132",
         description: "Very important product information.",
