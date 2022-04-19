@@ -18,16 +18,18 @@
             .then(data => { 
                 data.map(product => {
                     var link = "../product.html?type=" + type + "&id=" + product.id;
+                    var image = "../images/" + product.image;
                     console.log(link);
                     if (product.active === "true")
                     {
-                        addCol(product.image, product.title, product.price, link, type);
+                        addCol(image, product.title, product.price, link, type);
                     }
                 })
             })
             .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES
                 var link = "../product.html?type=" + type + "?id=0";
-                addCol("images/hart_battery.png", "PRODUCT_TITLE ", "PRODUCT_PRICE", link, type);
+                var image = "../images/" + "hart_battery.png";
+                addCol(image, "PRODUCT_TITLE ", "PRODUCT_PRICE", link, type);
             })
         }
 
