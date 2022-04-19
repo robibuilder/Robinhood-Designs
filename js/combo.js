@@ -27,7 +27,7 @@
             })
             .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES
                 var link = "product.html?type=" + type + "?id=0";
-                addCol("../images/hart_battery.png", "PRODUCT_TITLE ", "PRODUCT_PRICE", link, type);
+                addCol("images/hart_battery.png", "PRODUCT_TITLE ", "PRODUCT_PRICE", link, type);
             })
         }
 
