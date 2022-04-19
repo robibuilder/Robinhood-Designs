@@ -18,7 +18,7 @@
             .then(data => { 
                 data.map(product => {
                     var link = "../product.html?type=" + type + "&id=" + product.id;
-                    var image = "../images/" + product.image;
+                    var image = "../" + product.image;
                     console.log(link);
                     if (product.active === "true")
                     {
