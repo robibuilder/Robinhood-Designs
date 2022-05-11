@@ -109,6 +109,8 @@ body {
         font-size: 18px;
         color: white;
     }
+
+    #map { height: 50vh; }
 }
 
 .img-grid{
