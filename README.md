@@ -2,7 +2,7 @@
 
 ### 🚀 v1.0.2
 
-Checkout the latest beta release of the site [Here](https://robibuilder.github.io/Robinhood-Designs/_
+Checkout the latest beta release of the site [Here](https://robibuilder.github.io/Robinhood-Designs/)
 
 ### 🏹 About
 
