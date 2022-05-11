@@ -100,6 +100,12 @@ body {
         color: #007bff !important
     }
 
+    /* index sub heading */
+    h6 {
+        font-size: 40px;
+        color: #007bff !important
+    }
+
     p-1 { /* all other text */
         font-size: 18px;
         color: black;
@@ -111,6 +117,18 @@ body {
     }
 
     #map { height: 50vh; }
+}
+
+/* custom formatting */
+
+.ptb-10 {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.ptb-25{
+    padding-top: 25vh;
+    padding-bottom: 25vh;
 }
 
 .img-grid{
