@@ -17,20 +17,21 @@
                 throw new Error();
             })
             .then(data => { 
+                for(let i = 0; i < numProducts; i++){
                 data.map(product => {
                     var link = "product.html?type=" + product.type + "&id=" + product.id;
                     console.log(link);
                     if (product.active === "true")
                     {
-                        for(let i = 0; i < numProducts; i++){
-                            addCol(product.image, product.title, product.price, link, type);
-                        }
+                        addCol(product.image, product.title, product.price, link, type);
                     }
-                })
+                })}
             })
             .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES
                 var link = "product.html?type=" + type + "?id=0";
-                addCol("images/hart_battery.png", "PRODUCT_TITLE ", "PRODUCT_PRICE", link, "featured");
+                for(let i = 0; i < numProducts; i++){
+                    addCol("images/hart_battery.png", "PRODUCT_TITLE ", "PRODUCT_PRICE", link, "featured");
+                }
             })
         }
 
