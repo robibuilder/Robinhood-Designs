@@ -21,7 +21,7 @@
             .then(data => { 
                 var link = "product.html?type=" + product.type + "&id=" + product.id;
                 console.log(link);
-                for(let i = 0; i < numProducts; i++)
+                for(let i = 0; i < data.length; i++)
                 {
                     if (data[i].active === "true")
                     {
