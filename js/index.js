@@ -1,6 +1,8 @@
         //document.body.onload = getAllBatteries;
         getAllProducts("featured");
 
+        let index = 0;
+
         function getAllProducts(type){
             // prod URL:
             var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/" + type;
@@ -17,15 +19,16 @@
                 throw new Error();
             })
             .then(data => { 
-                for(let i = 0; i < numProducts; i++){
                 data.map(product => {
                     var link = "product.html?type=" + product.type + "&id=" + product.id;
                     console.log(link);
                     if (product.active === "true")
                     {
                         addCol(product.image, product.title, product.price, link, type);
+                        index = index + 1;
                     }
-                })}
+                    console.log(index);
+                })
             })
             .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES
                 var link = "product.html?type=" + type + "?id=0";
