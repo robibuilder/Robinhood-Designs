@@ -81,6 +81,11 @@ html,body
         height: 15vh;
     }
 
+    /* Product Section */
+    .product-image-height{
+        height: 35vh;
+    }
+
     /* Map */
     #map { height: 50vh; }
 
@@ -166,6 +171,12 @@ html,body
     .top-nav-height{
         height: 7.5vh;
     }
+
+    /* Product Section */
+    .product-image-height{
+        height: 90vh;
+    }
+    
 
     /* Map */
     #map { height: 50vh; }

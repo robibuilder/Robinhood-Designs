@@ -43,6 +43,6 @@
                 document.getElementById("price").innerHTML = "PRODUCT_PRICE";
                 document.getElementById("link").innerHTML = purchaseLink;
                 document.getElementById("description").innerHTML = "PRODUCT_DESCRIPTION";
-                document.getElementById("image").innerHTML = "IMAGE_PATH.HTML";
+                document.getElementById("image").innerHTML = "<img class='img-grid' src='images/hart_battery.png' alt='telsa'>";
             })
         }
