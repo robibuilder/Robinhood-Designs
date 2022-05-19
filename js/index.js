@@ -19,10 +19,11 @@
                 throw new Error();
             })
             .then(data => { 
-                var link = "product.html?type=" + product.type + "&id=" + product.id;
-                console.log(link);
+                
                 for(let i = 0; i < data.length; i++)
                 {
+                    var link = "product.html?type=" + product.type + "&id=" + product.id;
+                    console.log(link);
                     if (data[i].active === "true")
                     {
                         addCol(product.image, product.title, product.price, link, type);
