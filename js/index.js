@@ -7,6 +7,8 @@
             // dev URL
             //var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/" + type;
 
+            let numProducts = browserCheck();
+
             fetch(url)
             .then(response => {
                 if(response.ok) {
@@ -20,7 +22,9 @@
                     console.log(link);
                     if (product.active === "true")
                     {
-                        addCol(product.image, product.title, product.price, link, type);
+                        for(let i = 0; i < numProducts; i++){
+                            addCol(product.image, product.title, product.price, link, type);
+                        }
                     }
                 })
             })
@@ -64,3 +68,15 @@
             var element = document.getElementById(c);
             element.appendChild(col);
         }
+
+        function browserCheck(){
+            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+                // true for mobile device
+                return 2;
+              }else{
+                // false for not mobile device
+                return 3;
+              }
+        }
+
+        browserCheck()
