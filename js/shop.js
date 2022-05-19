@@ -41,7 +41,7 @@
         function addCol(i, t, p, l, c){
             // create the column - lg only
             var col = document.createElement("div");
-            col.className = "col-lg-4";
+            col.className = "col-lg-4 col-sm-6";
 
             var a = document.createElement("a");
             //node = document.createTextNode("")

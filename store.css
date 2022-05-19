@@ -62,20 +62,26 @@ html,body
     }
 
     p-1 { /* all other text */
-        font-size: 50px;
+        font-size: 35px;
         color: black;
     }
 
     p-2 {
-        font-size: 25px;
+        font-size: 35px;
         color: white;
     }
 
+    /* Top Navigation */
     p-3 {
         font-size: 50px;
         color: #007bff !important /* blue */
+    } 
+
+    .top-nav-height{
+        height: 15vh;
     }
 
+    /* Map */
     #map { height: 50vh; }
 
 }
@@ -145,11 +151,17 @@ html,body
         color: white;
     }
 
+    /* Top Navigation */
     p-3 {
         font-size: 18px;
         color: #007bff !important /* blue */
     }
 
+    .top-nav-height{
+        height: 7.5vh;
+    }
+
+    /* Map */
     #map { height: 50vh; }
 }
 
