@@ -1,9 +1,11 @@
-
-body {
-    position: relative;
-    background-attachment: fixed;
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
-
 .jumbotron{
     height: 100vh;
 }
@@ -13,10 +15,19 @@ body {
 @media screen and (min-width: 300px) {
     .jumbotron {
         background-color: white;
-        height: 50vh;
     }
     .top_margin {
         margin-top: 5vh;
+    }
+
+    .featured_product {
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+
+    .map_section {
+        padding-top: 10vh;
+        padding-bottom: 10vh;
     }
 
     /* ----- FONT SIZING ----- */
@@ -27,7 +38,7 @@ body {
     }
 
     h1 {
-        font-size: 200px;
+        font-size: 175px;
         color: #007bff !important
     }
 
@@ -42,19 +53,37 @@ body {
     }
 
     h4{ /* depricated in feature project section */
-        font-size: 25px;
+        font-size: 75px;
         color: white;
+    }
+    h5 {
+        font-size: 75px;
+        color: #007bff !important
     }
 
     p-1 { /* all other text */
-        font-size: 25px;
+        font-size: 35px;
         color: black;
     }
 
     p-2 {
-        font-size: 25px;
+        font-size: 35px;
         color: white;
     }
+
+    /* Top Navigation */
+    p-3 {
+        font-size: 50px;
+        color: #007bff !important /* blue */
+    } 
+
+    .top-nav-height{
+        height: 15vh;
+    }
+
+    /* Map */
+    #map { height: 50vh; }
+
 }
 
 /* ----- LARGE SCREEN FORMATTING ----- */
@@ -66,6 +95,18 @@ body {
     }
     .top_margin {
         margin-top: 15vh;
+    }
+
+    .featured_product {
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        text-align: center;
+    }
+
+    .map_section {
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        text-align: center;
     }
 
     /* ----- FONT SIZING ----- */
@@ -116,6 +157,17 @@ body {
         color: white;
     }
 
+    /* Top Navigation */
+    p-3 {
+        font-size: 18px;
+        color: #007bff !important /* blue */
+    }
+
+    .top-nav-height{
+        height: 7.5vh;
+    }
+
+    /* Map */
     #map { height: 50vh; }
 }
 
@@ -199,7 +251,7 @@ a:hover, a:active ,a:link, a:visited {
 .topBody{
     padding-top: 250px;
     padding-left: 250px;
-    padding-right: 250px;
+    /* padding-right: 250px; */
 }
 
 .midBody{
