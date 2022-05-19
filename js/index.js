@@ -19,16 +19,17 @@
                 throw new Error();
             })
             .then(data => { 
-                
-                for(let i = 0; i < data.length; i++)
-                {
-                    var link = "product.html?type=" + product.type + "&id=" + product.id;
-                    console.log(link);
-                    if (data[i].active === "true")
-                    {
-                        addCol(product.image, product.title, product.price, link, type);
-                    }
-                }
+                console.log(data.length);
+                // for(let i = 0; i < data.length; i++)
+                // {
+                //     var link = "product.html?type=" + product.type + "&id=" + product.id;
+                //     console.log(link);
+                //     if (data[i].active === "true")
+                //     {
+                //         addCol(product.image, product.title, product.price, link, type);
+                //     }
+                // }
+
                 // data.map(product => {
                 //     var link = "product.html?type=" + product.type + "&id=" + product.id;
                 //     console.log(link);
