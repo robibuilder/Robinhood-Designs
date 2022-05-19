@@ -19,16 +19,27 @@
                 throw new Error();
             })
             .then(data => { 
-                data.map(product => {
-                    var link = "product.html?type=" + product.type + "&id=" + product.id;
-                    console.log(link);
-                    if (product.active === "true")
+                var link = "product.html?type=" + product.type + "&id=" + product.id;
+                console.log(link);
+                for(let i = 0; i < numProducts; i++)
+                {
+                    if (data[i].active === "true")
                     {
                         addCol(product.image, product.title, product.price, link, type);
-                        index = index + 1;
                     }
-                    console.log(index);
-                })
+                }
+                // data.map(product => {
+                //     var link = "product.html?type=" + product.type + "&id=" + product.id;
+                //     console.log(link);
+                //     if (product.active === "true")
+                //     {
+                //         addCol(product.image, product.title, product.price, link, type);
+                //         index = index + 1;
+                //     }
+                //     if (index == numProducts){
+                //         break;
+                //     }
+                // })
             })
             .catch((error) => { // TODO: SET ERROR FOR PRODUCT PAGES
                 var link = "product.html?type=" + type + "?id=0";
