@@ -14,7 +14,7 @@
             //var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/";
             var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/";
 
-            var batteriesID = type + "/" + id;//.toString();
+            var batteriesID = type + "/" + id.toString();
             url = url + batteriesID;
 
             console.log(url);
