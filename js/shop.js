@@ -4,9 +4,9 @@
 
         function getAllProducts(type){
             // prod URL:
-            var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/" + type;
+            //var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/" + type;
             // dev URL
-            //var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/" + type;
+            var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/" + type;
 
             fetch(url)
             .then(response => {
