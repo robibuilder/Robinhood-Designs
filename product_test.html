@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="viewport" http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="store.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+<!-- ====================================================================================== -->
+
+<div class="container top-nav-height">
+    <div class="row" style="margin-top: 5vh; text-align: center;">
+        <div class="col-lg-1 col-sm-4">
+            <a href="../index.html">
+                <p-3>Home</p-3>
+            </a>
+        </div>
+        <div class="col-lg-1 col-sm-4">
+            <a href="all.html">
+                <p-3><u>Shop</u></p-3>
+            </a>
+        </div>
+        <div class="col-lg-1 col-sm-4">
+            <a href="../about.html">
+                <p-3>About</p-3>
+            </a>
+        </div>
+        <div class="col-lg-7 col-sm-12"><!-- insert "border"-->
+            <h5>Robinhood Designs</h5>
+        </div>
+        <div class="col-lg-2">
+        </div>
+    </div>
+</div>
+
+<!-- ======================================================================================= -->
+
+<!-- START OF PRODUCT SECTION -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 product-image-height">
+                <p id="image"></p>
+            </div>
+            <div class="col-lg-6" style="text-align: center;">
+                <h3 id="title"></h3>
+                <p id="price"></p>
+                <p id="description"></p>
+                <p-2 id="link"></p-2>
+                <p id="log"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+            //let productID = 0
+            const myUrl = new URL(window.location.href);
+        var productType = myUrl.searchParams.get("type");
+        var productID = myUrl.searchParams.get("id");
+
+        console.log("type: " + productType);
+        console.log("id: " + productID);
+
+        getProductByID(productType, productID);
+
+        //productID = 2
+
+        function getProductByID(type, id){
+            //var url = "https://robinhood-designs-api.netlify.app/.netlify/functions/app/";
+            var url = "https://priceless-kare-3dd76e.netlify.app/.netlify/functions/app/";
+
+            var batteriesID = type + "/" + id;
+            url = url + batteriesID;
+
+            console.log(url);
+
+            fetch(url)
+            .then(response => {
+                if(response.ok) {
+                    return response.json();
+                }
+                throw new Error();
+            })
+            .then(data => { 
+                var text = "Purchase";
+                var purchaseLink = text.link(data.link);
+                var imagePath = "<img class='img-grid' src='" + data.image + "' alt='telsa'>";
+
+                document.getElementById("title").innerHTML = data.title;
+                document.getElementById("price").innerHTML = data.price;
+                document.getElementById("link").innerHTML = purchaseLink;
+                document.getElementById("description").innerHTML = data.description;
+                document.getElementById("image").innerHTML = imagePath;
+            })
+            .catch((error) => {
+                var text = "Purchase";
+                var purchaseLink = text.link("http://jacobrobinett.com");
+
+                document.getElementById("title").innerHTML = "PRODUCT_TITLE";
+                document.getElementById("price").innerHTML = "PRODUCT_PRICE";
+                document.getElementById("link").innerHTML = purchaseLink;
+                document.getElementById("description").innerHTML = "PRODUCT_DESCRIPTION";
+                document.getElementById("image").innerHTML = "<img class='img-grid' src='images/hart_battery.png' alt='telsa'>";
+            })
+        }
+    </script>
+
+
+<!-- ====================================================================================== -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/dynamic_css.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+<!-- BEGIN WITH FOOTER -->
+
+<footer class="footer" style="text-align: left;">
+    <div class="container-fluid" style="padding: 5vh;">
+        <div class="row">
+            <div class="col-lg-12 footer-padding">
+                <p-2>Robinhood Designs</p-2>
+            </div>
+
+            <div class="col-lg-12 footer-padding">
+                <p-2>2323 East 71st St<br>Tulsa, Ok 74136<br>(918) 857-5436<br></p-2>
+            </div>
+
+            <div class="col-lg-12 footer-padding">
+                <p-2>Made by Jacob Robinett</p-2>
+                <br>
+                <p-2>Copyright 2022 © Robinhood Designs LLC</p-2>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
