@@ -31,8 +31,8 @@
                 var purchaseLink = text.link(data.link);
                 var imagePath = "<img class='img-grid' src='" + data.image + "' alt='telsa'>";
 
-                console.log("data.title " + data.title)
-                console.log("data.price " + data.price)
+                console.log("data.title " + data[0].title)
+                console.log("data.price " + data[0].price)
 
                 document.getElementById("title").innerHTML = data.title;
                 document.getElementById("price").innerHTML = data.price;
