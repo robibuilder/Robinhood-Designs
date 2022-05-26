@@ -28,16 +28,16 @@
             })
             .then(data => { 
                 var text = "Purchase";
-                var purchaseLink = text.link(data.link);
-                var imagePath = "<img class='img-grid' src='" + data.image + "' alt='telsa'>";
+                var purchaseLink = text.link(data[0].link);
+                var imagePath = "<img class='img-grid' src='" + data[0].image + "' alt='telsa'>";
 
                 console.log("data.title " + data[0].title)
                 console.log("data.price " + data[0].price)
 
-                document.getElementById("title").innerHTML = data.title;
-                document.getElementById("price").innerHTML = data.price;
+                document.getElementById("title").innerHTML = data[0].title;
+                document.getElementById("price").innerHTML = data[0].price;
                 document.getElementById("link").innerHTML = purchaseLink;
-                document.getElementById("description").innerHTML = data.description;
+                document.getElementById("description").innerHTML = data[0].description;
                 document.getElementById("image").innerHTML = imagePath;
             })
             .catch((error) => {
